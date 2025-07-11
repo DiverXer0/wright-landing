@@ -341,9 +341,6 @@ const App = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="premium-btn bg-white text-blue-900 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-xl">
-                📄 Download CV
-              </button>
               <button className="premium-btn bg-blue-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl">
                 💼 Connect on LinkedIn
               </button>
