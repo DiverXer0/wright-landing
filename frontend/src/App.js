@@ -80,47 +80,92 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Hero Section */}
-      <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900"
-          style={{
-            backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.6)), url('https://images.unsplash.com/flagged/photo-1573603867114-76112e1d7a23?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWNofGVufDB8fHxibHVlfDE3NTIyMDQ0MDJ8MA&ixlib=rb-4.1.0&q=85')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
+      {/* Hero Section - Alternative Design */}
+      <section className="hero-section-alt relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-blue-800"></div>
         
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="glass-card p-12 rounded-3xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl">
-            <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1649768870222-17848797d6b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwwfHx8Ymx1ZXwxNzUyMjA0NDA4fDA&ixlib=rb-4.1.0&q=85"
-                  alt="Dan Wright"
-                  className="w-full h-full object-cover"
-                />
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-left">
+              <div className="mb-8">
+                <div className="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 text-blue-200 text-sm font-medium mb-6">
+                  15+ Years Technology Leadership
+                </div>
+                
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                  <span className="block">Dan</span>
+                  <span className="block text-blue-300">Wright</span>
+                </h1>
+                
+                <div className="w-24 h-1 bg-blue-400 mb-8 rounded-full"></div>
+                
+                <p className="text-xl md:text-2xl text-blue-100 font-light mb-8 max-w-lg">
+                  Transforming businesses through strategic technology leadership and innovative digital solutions
+                </p>
               </div>
-              <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                Dan Wright
-              </h1>
-              <p className="text-2xl md:text-3xl text-blue-100 font-light mb-8">
-                Technology Leader & Innovator
-              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <button className="premium-btn bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-xl">
+                  💼 Connect on LinkedIn
+                </button>
+                <button className="premium-btn bg-transparent border-2 border-blue-400 text-blue-100 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-400 hover:text-white transform hover:scale-105 transition-all duration-300">
+                  📅 Schedule a Chat
+                </button>
+              </div>
+              
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-blue-400/30">
+                <div>
+                  <div className="text-3xl font-bold text-blue-300 mb-1">$10M+</div>
+                  <div className="text-blue-200 text-sm">Cost Savings</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-300 mb-1">50+</div>
+                  <div className="text-blue-200 text-sm">Projects</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-300 mb-1">99.9%</div>
+                  <div className="text-blue-200 text-sm">Uptime</div>
+                </div>
+              </div>
             </div>
             
-            <p className="text-xl text-blue-50 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Transforming businesses through strategic technology leadership and innovative solutions. 
-              15+ years of proven excellence in IT operations and digital transformation.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="premium-btn bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-xl">
-                💼 Connect on LinkedIn
-              </button>
-              <button className="premium-btn bg-transparent border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-blue-900 transform hover:scale-105 transition-all duration-300">
-                📅 Schedule a Chat
-              </button>
+            {/* Right Content */}
+            <div className="relative">
+              <div className="relative">
+                {/* Main Image */}
+                <div className="glass-card p-8 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1649768870222-17848797d6b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwwfHx8Ymx1ZXwxNzUyMjA0NDA4fDA&ixlib=rb-4.1.0&q=85"
+                    alt="Dan Wright - Technology Leader"
+                    className="w-full h-[400px] object-cover rounded-2xl"
+                  />
+                </div>
+                
+                {/* Floating Cards */}
+                <div className="absolute -top-4 -right-4 glass-card p-4 rounded-2xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl">
+                  <div className="text-white font-semibold">Azure Expert</div>
+                  <div className="text-blue-200 text-sm">Cloud Architecture</div>
+                </div>
+                
+                <div className="absolute -bottom-4 -left-4 glass-card p-4 rounded-2xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl">
+                  <div className="text-white font-semibold">Security Leader</div>
+                  <div className="text-blue-200 text-sm">Cybersecurity</div>
+                </div>
+              </div>
+              
+              {/* Background Decorations */}
+              <div className="absolute -top-8 -right-8 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-blue-600/10 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
