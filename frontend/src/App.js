@@ -236,7 +236,8 @@ const App = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills Section - Commented out for now */}
+      {/* 
       <section 
         id="skills"
         data-animate
@@ -286,6 +287,7 @@ const App = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Testimonials */}
       <section 
