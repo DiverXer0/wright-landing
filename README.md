@@ -35,7 +35,7 @@ This landing page will be automatically deployed to GitHub Pages at: `https://YO
 ## 📦 Installation & Development
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 20+ 
 - Yarn package manager
 
 ### Local Development
