@@ -161,7 +161,7 @@ const App = () => {
                     style={{ aspectRatio: '267/400' }}
                     onError={(e) => {
                       console.log('Image failed to load, using fallback');
-                      e.target.src = 'https://images.unsplash.com/photo-1649768870222-17848797d6b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwwfHx8Ymx1ZXwxNzUyMjA0NDA4fDA&ixlib=rb-4.1.0&q=85';
+                      e.target.src = 'images/profile-photo.jpg';
                     }}
                   />
                 </div>
