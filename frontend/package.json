@@ -10,10 +10,11 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "craco build && cp frontend/build/static/css/*.css frontend/build/ && cp frontend/build/static/js/*.js frontend/build/",
+    "build:gh": "PUBLIC_URL=/wright-landing craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "predeploy": "yarn build:gh",
     "deploy": "gh-pages -d build"
   },
   "homepage": "https://diverxer0.github.io/wright-landing",
