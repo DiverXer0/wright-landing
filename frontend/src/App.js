@@ -80,7 +80,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* Hero Section - Alternative Design */}
+      {/* Hero Section - Optimized for 267x400 Portrait */}
       <section className="hero-section-alt relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-blue-800"></div>
         
@@ -93,9 +93,9 @@ const App = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            {/* Left Content - Takes 3 columns */}
+            <div className="lg:col-span-3 text-left">
               <div className="mb-8">
                 <div className="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 text-blue-200 text-sm font-medium mb-6">
                   15+ Years Technology Leadership
@@ -114,12 +114,22 @@ const App = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="premium-btn bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-xl">
+                <a 
+                  href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="premium-btn bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-xl text-center"
+                >
                   💼 Connect on LinkedIn
-                </button>
-                <button className="premium-btn bg-transparent border-2 border-blue-400 text-blue-100 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-400 hover:text-white transform hover:scale-105 transition-all duration-300">
+                </a>
+                <a 
+                  href="https://calendly.com/YOUR_CALENDLY_LINK" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="premium-btn bg-transparent border-2 border-blue-400 text-blue-100 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-400 hover:text-white transform hover:scale-105 transition-all duration-300 text-center"
+                >
                   📅 Schedule a Chat
-                </button>
+                </a>
               </div>
               
               {/* Quick Stats */}
@@ -139,33 +149,44 @@ const App = () => {
               </div>
             </div>
             
-            {/* Right Content */}
-            <div className="relative">
+            {/* Right Content - Takes 2 columns, optimized for 267x400 portrait */}
+            <div className="lg:col-span-2 relative flex justify-center">
               <div className="relative">
-                {/* Main Image */}
-                <div className="glass-card p-8 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl">
+                {/* Main Image Container - Optimized for 267x400 */}
+                <div className="glass-card p-4 md:p-6 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl portrait-container">
                   <img 
-                    src="https://images.unsplash.com/photo-1649768870222-17848797d6b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwwfHx8Ymx1ZXwxNzUyMjA0NDA4fDA&ixlib=rb-4.1.0&q=85"
+                    src="/images/profile-photo.jpg"
                     alt="Dan Wright - Technology Leader"
-                    className="w-full h-[400px] object-cover rounded-2xl"
+                    className="w-full h-auto object-cover object-center rounded-2xl profile-image mx-auto"
+                    style={{ aspectRatio: '267/400' }}
                   />
                 </div>
                 
-                {/* Floating Cards */}
-                <div className="absolute -top-4 -right-4 glass-card p-4 rounded-2xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl">
-                  <div className="text-white font-semibold">Azure Expert</div>
-                  <div className="text-blue-200 text-sm">Cloud Architecture</div>
+                {/* Floating Cards - Hidden on very small screens, shown as static on mobile */}
+                <div className="hidden sm:block absolute -top-4 -right-2 glass-card p-3 rounded-2xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl max-w-[120px]">
+                  <div className="text-white font-semibold text-sm">Azure Expert</div>
+                  <div className="text-blue-200 text-xs">Cloud Architecture</div>
                 </div>
                 
-                <div className="absolute -bottom-4 -left-4 glass-card p-4 rounded-2xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl">
-                  <div className="text-white font-semibold">Security Leader</div>
-                  <div className="text-blue-200 text-sm">Cybersecurity</div>
+                <div className="hidden sm:block absolute -bottom-4 -left-2 glass-card p-3 rounded-2xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl max-w-[120px]">
+                  <div className="text-white font-semibold text-sm">Security Leader</div>
+                  <div className="text-blue-200 text-xs">Cybersecurity</div>
+                </div>
+                
+                {/* Mobile Static Cards */}
+                <div className="sm:hidden mt-4 flex gap-2 justify-center">
+                  <div className="glass-card p-2 rounded-xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl text-center">
+                    <div className="text-white font-semibold text-xs">Azure Expert</div>
+                  </div>
+                  <div className="glass-card p-2 rounded-xl backdrop-blur-lg bg-blue-500/20 border border-blue-400/30 shadow-xl text-center">
+                    <div className="text-white font-semibold text-xs">Security Leader</div>
+                  </div>
                 </div>
               </div>
               
-              {/* Background Decorations */}
-              <div className="absolute -top-8 -right-8 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-blue-600/10 rounded-full blur-xl"></div>
+              {/* Background Decorations - Adjusted for portrait layout */}
+              <div className="absolute -top-8 -right-4 w-24 h-24 bg-blue-500/10 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-8 -left-4 w-32 h-32 bg-blue-600/10 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
