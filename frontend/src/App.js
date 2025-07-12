@@ -155,10 +155,14 @@ const App = () => {
                 {/* Main Image Container - Optimized for 267x400 */}
                 <div className="glass-card p-4 md:p-6 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl portrait-container">
                   <img 
-                    src="/images/profile-photo.jpg"
+                    src={`${process.env.PUBLIC_URL}/images/profile-photo.jpg`}
                     alt="Dan Wright - Technology Leader"
                     className="w-full h-auto object-cover object-center rounded-2xl profile-image mx-auto"
                     style={{ aspectRatio: '267/400' }}
+                    onError={(e) => {
+                      console.log('Image failed to load, using fallback');
+                      e.target.src = 'https://images.unsplash.com/photo-1649768870222-17848797d6b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjBwb3J0cmFpdHxlbnwwfHx8Ymx1ZXwxNzUyMjA0NDA4fDA&ixlib=rb-4.1.0&q=85';
+                    }}
                   />
                 </div>
                 
