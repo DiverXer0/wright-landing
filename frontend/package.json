@@ -16,7 +16,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME",
+  "homepage": "https://diverxer0.github.io/wright-landing",
   "browserslist": {
     "production": [
       ">0.2%",
