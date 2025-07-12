@@ -115,7 +115,7 @@ const App = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a 
-                  href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" 
+                  href="https://linkedin.com/in/dan--wright" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="premium-btn bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-xl text-center"
