@@ -36,7 +36,7 @@ jobs:
           
       - name: Build React app
         working-directory: ./frontend
-        run: yarn build
+        run: yarn build:gh
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
