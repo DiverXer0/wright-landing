@@ -155,7 +155,7 @@ const App = () => {
                 {/* Main Image Container - Optimized for 267x400 */}
                 <div className="glass-card p-4 md:p-6 rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 shadow-2xl portrait-container">
                   <img 
-                    src={`${process.env.PUBLIC_URL}/images/profile-photo.jpg`}
+                    src={`${process.env.PUBLIC_URL}https://diverxer0.github.io/wright-landing/images/profile-photo.jpg`}
                     alt="Dan Wright - Technology Leader"
                     className="w-full h-auto object-cover object-center rounded-2xl profile-image mx-auto"
                     style={{ aspectRatio: '267/400' }}
