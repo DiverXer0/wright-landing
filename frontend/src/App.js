@@ -633,12 +633,22 @@ const App = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="premium-btn bg-blue-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl">
+              <a 
+                href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-btn bg-blue-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-blue-600 transform hover:scale-105 transition-all duration-300 shadow-xl text-center"
+              >
                 💼 Connect on LinkedIn
-              </button>
-              <button className="premium-btn bg-transparent border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-blue-900 transform hover:scale-105 transition-all duration-300">
+              </a>
+              <a 
+                href="https://calendly.com/YOUR_CALENDLY_LINK" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="premium-btn bg-transparent border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-blue-900 transform hover:scale-105 transition-all duration-300 text-center"
+              >
                 📅 Schedule a Chat
-              </button>
+              </a>
             </div>
           </div>
         </div>
