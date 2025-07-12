@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/YOUR_REPOSITORY_NAME/static/css/main.c24d3698.css",
-    "main.js": "/YOUR_REPOSITORY_NAME/static/js/main.b5a0df82.js",
-    "index.html": "/YOUR_REPOSITORY_NAME/index.html",
-    "main.c24d3698.css.map": "/YOUR_REPOSITORY_NAME/static/css/main.c24d3698.css.map",
-    "main.b5a0df82.js.map": "/YOUR_REPOSITORY_NAME/static/js/main.b5a0df82.js.map"
+    "main.css": "/wright-landing/static/css/main.b24ac90d.css",
+    "main.js": "/wright-landing/static/js/main.d946e4c9.js",
+    "index.html": "/wright-landing/index.html",
+    "main.b24ac90d.css.map": "/wright-landing/static/css/main.b24ac90d.css.map",
+    "main.d946e4c9.js.map": "/wright-landing/static/js/main.d946e4c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c24d3698.css",
-    "static/js/main.b5a0df82.js"
+    "static/css/main.b24ac90d.css",
+    "static/js/main.d946e4c9.js"
   ]
 }
